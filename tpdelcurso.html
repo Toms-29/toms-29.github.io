@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curriculum Vitae</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <Style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: lightblue;
+            margin: 50px 60px 20px 60px;
+            padding: 10px;
+            box-sizing: content-box;
+        }
+
+        .box {
+            width: 1500px;
+            height: 1000px;
+            border: solid white;
+            background-color: white;
+            margin: 40px 60px 30px 95px;
+            padding: 50px;
+            box-sizing: content-box;
+        }
+
+        .Imagen {
+            position: absolute;
+            left: 1600px;
+            top: 160px;
+        }
+
+        .Datos_personales {
+            background-color: lightgrey;
+            width: 500px;
+            height: 210px;
+            margin: 20px;
+            padding: 20px;
+            position: absolute;
+            top: 266px;
+            display: none;
+        }
+
+        .Formacion {
+            background-color: lightgrey;
+            width: 500px;
+            height: 284px;
+            margin: 20px;
+            padding: 20px;
+            position: absolute;
+            top: 540px;
+            display: none;
+        }
+
+        .Disponibilidad {
+            background-color: lightgrey;
+            width: 500px;
+            height: 60px;
+            margin: 20px;
+            padding: 20px;
+            position: absolute;
+            top: 890px;
+            display: none;
+        }
+
+        .Idiomas {
+            background-color: lightgrey;
+            width: 500px;
+            height: 60px;
+            margin: 20px;
+            padding: 20px;
+            position: absolute;
+            left: 850px;
+            top: 266px;
+            display: none;
+        }
+
+        .Software {
+            background-color: lightgrey;
+            width: 500px;
+            height: 60px;
+            margin: 20px;
+            padding: 20px;
+            position: absolute;
+            left: 850px;
+            top: 400px;
+            display: none;
+        }
+
+        .Contacto {
+            background-color: lightgrey;
+            width: 500px;
+            height: 84px;
+            margin: 20px;
+            padding: 20px;
+            position: absolute;
+            left: 850px;
+            top: 530px;
+            display: none;
+        }
+
+        .Experiencia {
+            background-color: lightgrey;
+            width: 500px;
+            height: 84px;
+            margin: 20px;
+            padding: 20px;
+            position: absolute;
+            top: 1025px;
+            display: none;
+        }
+
+        .Caracteristicas {
+            background-color: lightgrey;
+            width: 500px;
+            height: 191px;
+            margin: 20px;
+            padding: 20px;
+            position: absolute;
+            left: 850px;
+            top: 695px;
+            display: none;
+        }
+
+        .Mostrar {
+            display: block;
+        }
+
+        #Idiomas_b {
+            margin: 20px;
+            padding: 20px;
+            position: absolute;
+            left: 800px;
+            top: 192px;
+        }
+
+        #Software_b{
+            margin: 20px;
+            padding: 20px;
+            position: absolute;
+            left: 800px;
+            top: 327px;
+        }
+
+        #Contacto_b{
+            margin: 20px;
+            padding: 20px;
+            position: absolute;
+            left: 800px;
+            top: 455px;
+        }
+
+        #Caracteristicas_b{
+            margin: 20px;
+            padding: 20px;
+            position: absolute;
+            left: 800px;
+            top: 616px;
+        }
+
+        #Formacion_b{
+            margin: 20px;
+            padding: 20px;
+            position: absolute;
+            left: 177px;
+            top: 470px;
+        }
+
+        #Disponibilidad_b{
+            margin: 20px;
+            padding: 20px;
+            position: absolute;
+            left: 177px;
+            top: 820px;
+        }
+
+        #Experiencia_b{
+            margin: 20px;
+            padding: 20px;
+            position: absolute;
+            left: 177px;
+            top: 950px;
+        }
+
+    </Style>
+</head>
+
+<body>
+
+    <div class="box">
+
+        <div class="Imagen"><img
+                src="https://lh3.googleusercontent.com/ogw/AAEL6shne_gVnkW3CUgIVBvK5uGInaRPp31Hn6HY82zx=s32-c-mo"
+                alt="error al cargar la imagen" height="80px" width="80px" /></div>
+
+        <header> Trabajo Final del Curso: </header>
+
+        <h1> Curriculum Vitae </h1>
+
+        <h3 class="texto" id="Datos_personales_b">Datos personales:</h3>
+        <div class="Datos_personales" id="Datos_personales">
+            <ul>
+                <li> Matías Tomás Gamez Candelas </li>
+                <li>DNI: 46.349.753</li>
+                <li> Fecha de Nacimiento: 29/12/2004</li>
+                <li> Domicilio: El Provincial 2583</li>
+                <li> Localidad: San Francisco Solano</li>
+                <li> Codigo postal: 1847</li>
+                <li> Nacionalidad: Argentino</li>
+            </ul>
+        </div>
+
+        <script>
+
+            let Datos_personales_b = document.getElementById('Datos_personales_b');
+
+            let Datos_personales = document.getElementById('Datos_personales');
+
+            Datos_personales_b.addEventListener('click', toggleText);
+
+            function toggleText() {
+                Datos_personales.classList.toggle('Mostrar');
+            }
+
+        </script>
+
+
+        <h3 class="texto" id="Formacion_b">Formacion:</h3>
+        <div class="Formacion" id="Formacion">
+            <ul>
+                <li> Bachiller con orientacion en economia y administracion (2022) </li>
+                <li> Curso de economia personal en Junior Archivement (2021)</li>
+                <li> Curso planifica tu futuro en Junior Archivement (2022)</li>
+                <li> Curso de ciberseguridad en teletrabajo en Google Activate (2022) </li>
+                <li> Curso de digitalizacion de un negocio con herramientas de google en Google Activate (2022)</li>
+                <li> Curso de programacion basico en Ticmas Academy (en curso - 2023)</li>
+            </ul>
+        </div>
+
+        <script>
+
+            let Formacion_b = document.getElementById('Formacion_b');
+
+            let Formacion = document.getElementById('Formacion');
+
+            Formacion_b.addEventListener('click', toggleText);
+
+            function toggleText() {
+                Formacion.classList.toggle('Mostrar');
+            }
+
+        </script>
+
+
+        <h3 class="texto" id="Disponibilidad_b">Disponibilidad:</h3>
+        <div class="Disponibilidad" id="Disponibilidad">
+            <ul>
+                <li> Full-time </li>
+            </ul>
+        </div>
+
+        <script>
+
+            let Disponibilidad_b = document.getElementById('Disponibilidad_b');
+
+            let Disponibilidad = document.getElementById('Disponibilidad');
+
+            Disponibilidad_b.addEventListener('click', toggleText);
+
+            function toggleText() {
+                Disponibilidad.classList.toggle('Mostrar');
+            }
+
+        </script>
+
+
+        <h3 class="texto" id="Idiomas_b">Idiomas:</h3>
+        <div class="Idiomas" id="Idiomas">
+            <ul>
+                <li> Ingles basico </li>
+            </ul>
+        </div>
+
+        <script>
+
+            let Idiomas_b = document.getElementById('Idiomas_b');
+
+            let Idiomas = document.getElementById('Idiomas');
+
+            Idiomas_b.addEventListener('click', toggleText);
+
+            function toggleText() {
+                Idiomas.classList.toggle('Mostrar');
+            }
+
+        </script>
+
+
+        <h3 class="texto" id="Software_b">Softare:</h3>
+        <div class="Software" id="Software">
+            <ul>
+                <li> Paquete OFFICE (Word, Excel, PowerPoint) </li>
+            </ul>
+        </div>
+
+        <script>
+
+            let Software_b = document.getElementById('Software_b');
+
+            let Software = document.getElementById('Software');
+
+            Software_b.addEventListener('click', toggleText);
+
+            function toggleText() {
+                Software.classList.toggle('Mostrar');
+            }
+
+        </script>
+
+
+        <h3 class="texto" id="Contacto_b">Contacto:</h3>
+        <div class="Contacto" id="Contacto">
+            <ul>
+                <li> Celular: 1150955469 </li>
+                <li> E-mail: gamezmatiastomas@gmail.com</li>
+            </ul>
+        </div>
+
+        <script>
+
+            let Contacto_b = document.getElementById('Contacto_b');
+
+            let Contacto = document.getElementById('Contacto');
+
+            Contacto_b.addEventListener('click', toggleText);
+
+            function toggleText() {
+                Contacto.classList.toggle('Mostrar');
+            }
+
+        </script>
+
+
+        <h3 class="texto" id="Experiencia_b">Experiencia:</h3>
+        <div class="Experiencia" id="Experiencia">
+            <ul>
+                <li> Atender un almacen </li>
+                <li> Llevar el inventario de un almacen </li>
+            </ul>
+        </div>
+
+        <script>
+
+            let Experiencia_b = document.getElementById('Experiencia_b');
+
+            let Experiencia = document.getElementById('Experiencia');
+
+            Experiencia_b.addEventListener('click', toggleText);
+
+            function toggleText() {
+                Experiencia.classList.toggle('Mostrar');
+            }
+
+        </script>
+
+
+        <h3 lass="texto" id="Caracteristicas_b">Caracteristicas en trabajos anteriores:</h3>
+        <div class="Caracteristicas" id="Caracteristicas">
+            <ul>
+                <li> Buen trabajo en equipo </li>
+                <li> Buena comunicacio </li>
+                <li> Resolutivo </li>
+                <li> Creativo </li>
+                <li> Respetuoso </li>
+                <li> Responsable </li>
+            </ul>
+        </div>
+
+        <script>
+
+            let Caracteristicas_b = document.getElementById('Caracteristicas_b');
+
+            let Caracteristicas = document.getElementById('Caracteristicas');
+
+            Caracteristicas_b.addEventListener('click', toggleText);
+
+            function toggleText() {
+                Caracteristicas.classList.toggle('Mostrar');
+            }
+
+        </script>
+
+
+    </div>
+
+</body>
+<!-- No utilice carpetas a parte para JS y CSS porque a pesar de copiar textualmente el elemnto link, me saltaba error (error MIME en google), por lo cual no podia ver como avanzava en el trabajo-->
+</html>
